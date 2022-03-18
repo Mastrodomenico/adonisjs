@@ -12,7 +12,7 @@ Desenvolvimento feito em NodeJs com o Framework Adonisjs com typescript
 
 Clonando projeto:
 ~~~shell
-$ git clone https://
+$ git clone https://github.com/Mastrodomenico/adonisjs.git
 ~~~
 
 Rodando com docker
