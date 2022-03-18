@@ -1,0 +1,68 @@
+version: '3'
+services:
+  api:
+    container_name: api_mutual
+    build: .
+    restart: always
+    ports:
+      - "3000:3333"
+    depends_on:
+      - mysql
+      - redis
+    volumes:
+      - ./:/home/node/app
+  mysql:
+    container_name: mysql_mutual
+    image: mysql:8
+    command: mysqld --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: always
+    ports:
+      - "3334:3306"
+    volumes:
+      - db_volume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: database
+      MYSQL_USER: database
+      MYSQL_PASSWORD: 1234
+      MYSQL_ROOT_HOST: 172.20.0.4
+      MYSQL_TCP_PORT: 3306
+  mysql_test:
+    container_name: mysql_mutual_test
+    image: mysql:8
+    command: mysqld --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: always
+    ports:
+      - "3335:3306"
+    volumes:
+      - db_volume_test:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: database
+      MYSQL_USER: database
+      MYSQL_PASSWORD: 1234
+      MYSQL_ROOT_HOST: 172.20.0.4
+      MYSQL_TCP_PORT: 3305
+  redis:
+    image: redis
+    container_name: redis_mutual
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass 1234
+    hostname: redis
+    volumes:
+      - /data
+  redis_test:
+    image: redis
+    container_name: redis_mutual_test
+    restart: always
+    ports:
+      - "6378:6378"
+    command: redis-server --requirepass 1234 --port 6378
+    hostname: redis_test
+    volumes:
+      - /data
+volumes:
+  db_volume:
+  db_volume_test:
