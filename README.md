@@ -5,7 +5,7 @@
 Desenvolvimento feito em NodeJs com o Framework Adonisjs com typescript
 
 ### Bibliotécias utilzadas
-* Japa - Para testes automatizados
+* Japa — Para testes automatizados
 
 
 ### Rodando o projeto

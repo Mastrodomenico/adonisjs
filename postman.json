@@ -1,0 +1,419 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "00b1714a-c9b0-4f92-b2d1-ef9b5c21b172",
+			"uid": "0-00b1714a-c9b0-4f92-b2d1-ef9b5c21b172",
+			"name": "Movements",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"97c4b968-5a49-4acd-9407-fd9a427de553",
+				"8da2e582-28a4-4577-b558-0509bdaafe20",
+				"32582e89-569c-4e31-a349-c984dca0a774"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2022-03-18T05:57:12.177Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "32582e89-569c-4e31-a349-c984dca0a774",
+					"uid": "0-32582e89-569c-4e31-a349-c984dca0a774",
+					"name": "Transfer",
+					"url": "http://localhost:3000/movements/transfer",
+					"description": null,
+					"data": [
+						{
+							"key": "value",
+							"value": "10996",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "account_id_source",
+							"value": "3",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "account_id_destination",
+							"value": "2",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "00b1714a-c9b0-4f92-b2d1-ef9b5c21b172",
+					"pathVariables": {}
+				},
+				{
+					"id": "8da2e582-28a4-4577-b558-0509bdaafe20",
+					"uid": "0-8da2e582-28a4-4577-b558-0509bdaafe20",
+					"name": "Credit",
+					"url": "http://localhost:3000/movements/credit",
+					"description": null,
+					"data": [
+						{
+							"key": "value",
+							"value": "166001",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "account_id",
+							"value": "1",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "00b1714a-c9b0-4f92-b2d1-ef9b5c21b172",
+					"pathVariables": {}
+				},
+				{
+					"id": "97c4b968-5a49-4acd-9407-fd9a427de553",
+					"uid": "0-97c4b968-5a49-4acd-9407-fd9a427de553",
+					"name": "Debit",
+					"url": "http://localhost:3000/movements/debit",
+					"description": null,
+					"data": [
+						{
+							"key": "value",
+							"value": "166001",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "account_id",
+							"value": "2",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": null,
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "00b1714a-c9b0-4f92-b2d1-ef9b5c21b172",
+					"pathVariables": {}
+				}
+			]
+		},
+		{
+			"id": "52d67632-94ad-4c02-9e1b-1257fb082d47",
+			"uid": "0-52d67632-94ad-4c02-9e1b-1257fb082d47",
+			"name": "Account",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"76bd56bc-0e27-4e96-9615-45851579020c",
+				"2e2495b5-5b9d-47df-8f22-7d72bbbe8ee8",
+				"b755f1d7-fb1f-4ea5-b3a4-f472e09649f1",
+				"66e6065a-84ad-4801-ae46-544744f115db",
+				"858cff78-c73f-4df6-9dfe-356f546b7d67",
+				"2d7266b6-7c8e-4dfa-93b0-ac4f5c4f2574",
+				"3843d0a0-eea6-473d-80e5-cdd9f2c9cded"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2022-03-08T23:20:13.428Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "2d7266b6-7c8e-4dfa-93b0-ac4f5c4f2574",
+					"uid": "0-2d7266b6-7c8e-4dfa-93b0-ac4f5c4f2574",
+					"name": "Historic Movement",
+					"url": "http://localhost:3000/accounts/:id/movements",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "52d67632-94ad-4c02-9e1b-1257fb082d47",
+					"pathVariables": {
+						"id": "2"
+					}
+				},
+				{
+					"id": "2e2495b5-5b9d-47df-8f22-7d72bbbe8ee8",
+					"uid": "0-2e2495b5-5b9d-47df-8f22-7d72bbbe8ee8",
+					"name": "Get Account",
+					"url": "http://localhost:3000/accounts/1",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"key": "Accept",
+							"value": "application/json",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "52d67632-94ad-4c02-9e1b-1257fb082d47",
+					"headers": "Accept: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "3843d0a0-eea6-473d-80e5-cdd9f2c9cded",
+					"uid": "0-3843d0a0-eea6-473d-80e5-cdd9f2c9cded",
+					"name": "Balance",
+					"url": "http://localhost:3000/movements/account/:id/balance",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "52d67632-94ad-4c02-9e1b-1257fb082d47",
+					"pathVariables": {
+						"id": "2"
+					}
+				},
+				{
+					"id": "66e6065a-84ad-4801-ae46-544744f115db",
+					"uid": "0-66e6065a-84ad-4801-ae46-544744f115db",
+					"name": "Update Account",
+					"url": "http://localhost:3000/accounts/1",
+					"description": "",
+					"data": [
+						{
+							"key": "cpf",
+							"value": "22522122223",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "name",
+							"value": "Dani",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": [
+						{
+							"key": "Accept",
+							"value": "application/json",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "52d67632-94ad-4c02-9e1b-1257fb082d47",
+					"headers": "Accept: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "76bd56bc-0e27-4e96-9615-45851579020c",
+					"uid": "0-76bd56bc-0e27-4e96-9615-45851579020c",
+					"name": "List Accounts",
+					"url": "http://localhost:3000/accounts/",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"key": "Accept",
+							"value": "application/json",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "52d67632-94ad-4c02-9e1b-1257fb082d47",
+					"headers": "Accept: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "858cff78-c73f-4df6-9dfe-356f546b7d67",
+					"uid": "0-858cff78-c73f-4df6-9dfe-356f546b7d67",
+					"name": "Delete Account",
+					"url": "http://localhost:3000/accounts/5",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": [
+						{
+							"key": "Accept",
+							"value": "application/json",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"method": "DELETE",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "52d67632-94ad-4c02-9e1b-1257fb082d47",
+					"headers": "Accept: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "b755f1d7-fb1f-4ea5-b3a4-f472e09649f1",
+					"uid": "0-b755f1d7-fb1f-4ea5-b3a4-f472e09649f1",
+					"name": "Create Account",
+					"url": "http://localhost:3000/accounts/",
+					"description": "",
+					"data": [
+						{
+							"key": "cpf",
+							"value": "22522122223",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						},
+						{
+							"key": "name",
+							"value": "Daniel",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"dataOptions": null,
+					"dataMode": "urlencoded",
+					"headerData": [
+						{
+							"key": "Accept",
+							"value": "application/json",
+							"description": "",
+							"type": "default",
+							"enabled": true
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "52d67632-94ad-4c02-9e1b-1257fb082d47",
+					"headers": "Accept: application/json\n",
+					"pathVariables": {}
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "47930712-75eb-4e81-aaed-915a1f7788e8",
+			"name": "My Workspace - globals",
+			"values": []
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}
